@@ -1,0 +1,8 @@
+  [Desktop Entry]
+  Name=Check box list
+  Comment=A Check box list
+  Exec=flutter_helloword
+  Icon=${SNAP}/meta/gui/flutter_helloword.png # replace name to your app name
+  Terminal=false
+  Type=Application
+  Categories=Education; #adjust accordingly your snap category

@@ -1,0 +1,28 @@
+name: flutter-helloword
+version: 0.1.0
+summary: A list of Checkbox!
+description: A list with 1000 checkbox with aleatorns names and a button of reset
+
+confinement: strict
+base: core18
+grade: stable
+
+slots:
+  dbus-flutter-helloword: # adjust accordingly to your app name
+    interface: dbus
+    bus: session
+    name: org.bar.flutter_helloword # adjust accordingly to your app name and
+    
+apps:
+  flutter-helloword:
+    command: flutter_helloword
+    extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
+    plugs:
+    - network
+    slots:
+      - dbus-flutter-helloword
+parts:
+  flutter-helloword:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart # The main entry-point file of the application
